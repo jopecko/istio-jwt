@@ -16,7 +16,7 @@ tasks:
   create-cluster:
     run: once
     cmds:
-      - k3d cluster create {{.CLUSTER_NAME}} -a {{.NUM_WORKER_NODES}} --registry-create {{.CLUSTER_NAME}}-registry:0.0.0.0:{{.REGISTRY_PORT}} --k3s-arg "--no-deploy=traefik@server:*"
+      - k3d cluster create {{.CLUSTER_NAME}} -a {{.NUM_WORKER_NODES}} --registry-create {{.CLUSTER_NAME}}-registry:0.0.0.0:{{.REGISTRY_PORT}} --k3s-arg "--disable=traefik@server:*"
     vars:
       NUM_WORKER_NODES: 3
 

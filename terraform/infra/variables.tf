@@ -1,5 +1,5 @@
 variable "istio_version" {
-  default = "1.13.4"
+  default = "1.21.1"
 }
 
 variable "mesh_config" {

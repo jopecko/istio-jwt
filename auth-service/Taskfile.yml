@@ -28,7 +28,7 @@ tasks:
     desc: Build the web app
     deps: [test, docs]
     cmds:
-      - CGO_ENABLED=0 go build -o {{.EXE}} ./cmd/web/main.go
+      - GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o {{.EXE}} ./cmd/web/main.go
     sources:
       - ./**/*.go
     generates:
